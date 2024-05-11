@@ -8,16 +8,16 @@ public class MatrixMultiplication {
     public static class BlockMultiplier implements Runnable
     {
         List<List<Integer>> tempMatrixProduct;
-        public BlockMultiplier() {
-            // TODO
+        public int BlockMultiplier(int row , int col, List<List<Integer>> matrix_A, List<List<Integer>> matrix_B) {
+            int sum = 0;
+            for(int i = 0; i < matrix_A.getFirst().size(); i++)
+                sum += matrix_A.get(row).get(i) * matrix_B.get(i).get(col);
+            return sum;
         }
 
         @Override
         public void run() {
-            /*
-            TODO
-                Perform the calculation and store the final values in tempMatrixProduct
-            */
+
         }
     }
 
